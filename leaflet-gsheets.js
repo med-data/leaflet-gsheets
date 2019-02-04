@@ -35,12 +35,13 @@ window.addEventListener("DOMContentLoaded", init);
 var map = L.map("map").setView([40, -100], 4);
 
 // This is the Carto Positron basemap
-var basemap = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png", {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-	subdomains: "abcd",
+var basemap = L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png', {
+	attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
+	minZoom: 1,
 	maxZoom: 19
 });
 basemap.addTo(map);
+
 
 var sidebar = L.control.sidebar({
 	container: 'sidebar',
